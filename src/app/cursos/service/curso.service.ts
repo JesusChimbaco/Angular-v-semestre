@@ -26,7 +26,6 @@ export class CursoService {
 
 
   //Método para obtener un curso por id
-
   getCurso(idCurso: number): Observable<Curso> {
     return this.httpClient.get<Curso>(this.baseUrl + '/api/v1/curso-service/cursos/{id}' + idCurso);
   }
@@ -34,5 +33,10 @@ export class CursoService {
   //Metodo para eliminar curso por id
   borrarCurso(idCurso: number): Observable<any>{
     return this.httpClient.delete(this.baseUrl + "/api/v1/curso-service/cursos/{id}" + idCurso);
+  }
+
+  //Metodo para crear curso
+  crearCurso(curso: Curso): Observable<Curso>{
+    return this.httpClient.post<Curso>(this.baseUrl+ "/api/v1/curso-service/curso", curso);
   }
 }

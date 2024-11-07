@@ -1,1 +1,55 @@
-<p>crear-curso works!</p>
+<div class="card mx-auto" style="max-width: 500px;">
+  <div class="card-body">
+    <h5 class="card-title">Crear Curso</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Datos del curso</h6>
+
+    <form [formGroup]="crearCursoForm" (ngSubmit)="crearCurso(crearCursoForm.value)">
+      <div class="row">
+        <div class="col">
+
+          <!--   Campo nombre del curso   -->
+          <label for="nombre_curso">Curso</label>
+          <input id="nombre_curso"
+                 type="text"
+                 name="nombre_curso"
+                 placeholder="Escriba el nombre del curso aqui"
+                 formControlName="nombre_curso"
+                 class="form-control"
+          >
+
+          <!-- Campo descripcion del curso -->
+          <label for="descripcion_curso">Descripción del curso</label>
+          <input id="descripcion_curso"
+                 type="text"
+                 name="descripcion_curso"
+                 placeholder="Ingrese la descripción del curso"
+                 formControlName="descripcion_curso"
+                 class="form-control"
+          >
+
+          <!-- Campo nombre del docente -->
+          <label for="nombre_docente">Nombre del docente</label>
+          <input id="nombre_docente"
+                 type="text"
+                 name="nombre_docente"
+                 placeholder="Ingrese el nombre del docente"
+                 formControlName="nombre_docente"
+                 class="form-control"
+          >
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center mt-3">
+          <div class="col-6">
+            <button type="submit" class="btn btn-primary btn-block">Crear curso</button>
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-danger btn-block" (click)="cancelarCrearCurso()">Cancelar</button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
