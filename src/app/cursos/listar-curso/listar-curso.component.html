@@ -1,0 +1,34 @@
+<div class="container-fluid max-width-900">
+
+  <!--  Listado de cursos -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Código</th>
+      <th scope="col">Curso</th>
+      <th scope="col">Descripción del curso</th>
+      <th scope="col">Nombre del docente</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <!--  imprime curso por curso del listado de cursos  -->
+    <ng-container *ngFor="let curso of cursos">
+      <tr>
+        <td (click)="onSelected(curso)" class="clickable">{{curso.id}}</td>
+        <td (click)="onSelected(curso)" class="clickable">{{curso.nombre_curso}}</td>
+        <td (click)="onSelected(curso)" class="clickable">{{curso.descripcion_curso}}</td>
+        <td (click)="onSelected(curso)" class="clickable">{{curso.nombre_docente}}</td>
+        <!-- td (click)="borrarCurso(curso)" class="clickable"><img src="Link de imagen de borrar"  alt="borrar"/></td -->
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+  <div class="row justify-content-center mt-3">
+    <div class="col-6">
+      <button type="submit" class="btn btn-primary btn-block" (click)="crearCurso()" >Crear curso</button>
+    </div>
+  </div>
+</div>
+
