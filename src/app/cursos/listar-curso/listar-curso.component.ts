@@ -17,17 +17,15 @@ export class ListarCursoComponent implements OnInit{
 
 
   //Inyeccion de dependencias del servicio
-  constructor(private cursoService: CursoService, private routherPath: Router, private router: ActivatedRoute) {
+  constructor(private cursoService: CursoService, private routherPath: Router, private router: ActivatedRoute) {}
+
+  //Método que se ejecuta al iniciar el componente
+  ngOnInit(): void{
     this.cursoService.getCursos().subscribe(
       (cursos: Array<Curso>) =>{
         this.cursos = cursos;
       }
     );
-  }
-
-  //Método que se ejecuta al iniciar el componente
-  ngOnInit(): void{
-
   }
 
   //Evento para disparar al seleccionar un curso de la lista

@@ -16,7 +16,7 @@ export class CursoService {
   //Método para obtener los cursos
 
   getCursos(): Observable<Curso[]> {
-    return this.httpClient.get<Curso[]>(this.baseUrl + "/api/v1/curso-service/cursos")
+    return this.httpClient.get<Curso[]>(`${this.baseUrl}/api/v1/curso-service/cursos`)
       .pipe(
         map((result: any) => {
           //console.log(result._embedded./*directorio*/);
@@ -27,16 +27,16 @@ export class CursoService {
 
   //Método para obtener un curso por id
   getCurso(idCurso: string | null): Observable<Curso> {
-    return this.httpClient.get<Curso>(this.baseUrl + '/api/v1/curso-service/cursos/{id}' + idCurso);
+    return this.httpClient.get<Curso>(`${this.baseUrl}/api/v1/curso-service/cursos/${idCurso}`);
   }
 
   //Metodo para eliminar curso por id
   borrarCurso(idCurso: number): Observable<any>{
-    return this.httpClient.delete(this.baseUrl + "/api/v1/curso-service/cursos/{id}" + idCurso);
+    return this.httpClient.delete(`${this.baseUrl}/api/v1/curso-service/cursos/${idCurso}`);
   }
 
   //Metodo para crear curso
   crearCurso(curso: Curso): Observable<Curso>{
-    return this.httpClient.post<Curso>(this.baseUrl+ "/api/v1/curso-service/curso", curso);
+    return this.httpClient.post<Curso>(`${this.baseUrl}/api/v1/curso-service/curso`, curso);
   }
 }
