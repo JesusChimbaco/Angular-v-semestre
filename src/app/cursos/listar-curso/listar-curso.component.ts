@@ -38,30 +38,6 @@ export class ListarCursoComponent implements OnInit{
 
   }
 
-  //Método para eliminar un curso seleccionado de la lista
-  borrarCurso(curso: Curso) {
-    Swal.fire({
-      title: "Esta seguro?",
-      text: "Usted no puede revertir esto!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Si, borra el curso!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        //this.cursoService.borrarCurso(curso.id).subscribe(() => { // Llama al servicio para eliminar el curso
-        Swal.fire({
-          title: "Eliminado!",
-          text: "El curso ha sido eliminado.",
-          icon: "success"
-        });
-        this.cursos = this.cursos.filter((c) => c !== curso); // Actualiza la lista de cursos en la vista
-        //});
-      }
-    });
-  }
-
   //Método para redireccionar a la ruta /crear
   crearCurso(){
     this.routherPath.navigate(['/crear'])

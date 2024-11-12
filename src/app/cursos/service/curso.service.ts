@@ -26,7 +26,7 @@ export class CursoService {
 
 
   //Método para obtener un curso por id
-  getCurso(idCurso: number): Observable<Curso> {
+  getCurso(idCurso: string | null): Observable<Curso> {
     return this.httpClient.get<Curso>(this.baseUrl + '/api/v1/curso-service/cursos/{id}' + idCurso);
   }
 
