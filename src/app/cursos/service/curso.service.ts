@@ -35,4 +35,9 @@ export class CursoService {
   borrarCurso(idCurso: number): Observable<any>{
     return this.httpClient.delete(this.baseUrl + "/api/v1/curso-service/cursos/{id}" + idCurso);
   }
+
+  //Metodo para crear curso
+  crearCurso(curso: Curso): Observable<Curso>{
+    return this.httpClient.post<Curso>(`${this.baseUrl}/api/v1/curso-service/curso`, curso);
+  }
 }
