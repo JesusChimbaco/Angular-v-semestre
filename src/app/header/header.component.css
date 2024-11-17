@@ -1,0 +1,90 @@
+/* Estilo para el header */
+header {
+  background-color: #00A858; /* Color de fondo verde */
+  padding: 1rem 0; /* Espaciado superior e inferior para dar altura */
+  width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
+  height: 1.5cm; /* Altura del header */
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between; /* Espacio entre los elementos del header */
+}
+
+/* Contenedor para organizar los elementos dentro del header */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 105px;
+}
+
+header .logo img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-right: 650px;
+  gap: 5px;
+}
+
+.navbar li {
+  margin-right: 10px;
+}
+
+.navbar li:not(:last-child) {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.navbar a.active {
+  font-weight: bold;
+}
+
+/* Opción de hover para los enlaces */
+.navbar a:hover {
+  color: #ff9900;
+}
+
+/* Estilo para la sección de login y el icono de gorro */
+.login-section {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Ajusta la distancia desde la derecha */
+}
+
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 3px; /* Espacio entre login y el gorro */
+}
+
+.login-link:hover {
+  color: #ff9900;
+}
+
+/* Icono de gorro alineado al lado derecho del login */
+.gorro img {
+  width: 30px; /* Ajusta el tamaño del icono según prefieras */
+  height: auto;
+  filter: brightness(100) saturate(1000%) contrast(1000%) invert(1); /* Realza el blanco */
+}
+
+header .logo img {
+  max-height: 100%;
+  max-width: 100%;
+  margin-left: 15px;
+  filter: brightness(0) invert(1) grayscale(100%) saturate(1000%);
+}
+

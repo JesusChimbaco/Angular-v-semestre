@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1; /* Hace que el contenido principal ocupe el espacio disponible entre el header y el footer */
+  padding: 10px; /* Reduce el padding dentro del contenido principal */
+  margin-top: 70px; /* Agrega un margen superior para separar del header */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+
+.footer {
+  background-color: #00A858;
+  color: white;
+  padding: 1px;
+  text-align: center;
+  width: 100%;
+  margin-top: 450px;
+  font-family: 'Nunito Sans', sans-serif;
+}
