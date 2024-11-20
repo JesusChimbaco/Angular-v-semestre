@@ -12,7 +12,7 @@ import { FacultadesComponent } from './facultades/facultades.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
     FacultadesComponent
   ],
   imports: [
