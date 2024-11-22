@@ -1,0 +1,8 @@
+{
+  "/api/v1/curso-service": {
+    "target": "http://3.141.45.52:8084",
+    "secure": false,
+    "changeOrigin": true
+  }
+
+}

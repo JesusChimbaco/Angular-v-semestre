@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FacultadesComponent } from './facultades/facultades.component';
+import {RouterModule} from '@angular/router';
+import {provideHttpClient} from '@angular/common/http';
+import {CursoService} from './cursos/service/curso.service';
+
 
 
 @NgModule({
@@ -19,7 +23,8 @@ import { FacultadesComponent } from './facultades/facultades.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  exports: [RouterModule],
+  providers: [provideHttpClient(), CursoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

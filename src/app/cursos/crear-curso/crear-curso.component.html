@@ -1,55 +1,52 @@
-<div class="card mx-auto" style="max-width: 500px;">
-  <div class="card-body">
-    <h5 class="card-title">Crear Curso</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Datos del curso</h6>
+<div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #f4fdf4;">
+  <div class="card shadow-lg" style="max-width: 600px; width: 90%; border: 1px solid #008037; border-radius: 12px; padding: 20px;">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4" style="color: #008037; font-weight: bold; font-size: 1.8rem;">Crear Curso</h3>
+      <h5 class="card-subtitle text-center mb-4" style="color: #4d4d4d; font-size: 1.2rem;">Datos del curso</h5>
 
-    <form [formGroup]="crearCursoForm" (ngSubmit)="crearCurso(crearCursoForm.value)">
-      <div class="row">
-        <div class="col">
-
-          <!--   Campo nombre del curso   -->
-          <label for="nombre_curso">Curso</label>
+      <form [formGroup]="crearCursoForm" (ngSubmit)="crearCurso(crearCursoForm.value)">
+        <!-- Campo nombre del curso -->
+        <div class="mb-4">
+          <label for="nombre_curso" class="form-label" style="font-weight: bold; color: #008037; font-size: 1.1rem;">Curso</label>
           <input id="nombre_curso"
                  type="text"
                  name="nombre_curso"
-                 placeholder="Escriba el nombre del curso aqui"
+                 placeholder="Escriba el nombre del curso aquí"
                  formControlName="nombre_curso"
-                 class="form-control"
-          >
+                 class="form-control border-success"
+                 style="height: 50px; font-size: 1rem;">
+        </div>
 
-          <!-- Campo descripcion del curso -->
-          <label for="descripcion_curso">Descripción del curso</label>
+        <!-- Campo descripción del curso -->
+        <div class="mb-4">
+          <label for="descripcion_curso" class="form-label" style="font-weight: bold; color: #008037; font-size: 1.1rem;">Descripción del curso</label>
           <input id="descripcion_curso"
                  type="text"
                  name="descripcion_curso"
                  placeholder="Ingrese la descripción del curso"
                  formControlName="descripcion_curso"
-                 class="form-control"
-          >
+                 class="form-control border-success"
+                 style="height: 50px; font-size: 1rem;">
+        </div>
 
-          <!-- Campo nombre del docente -->
-          <label for="nombre_docente">Nombre del docente</label>
+        <!-- Campo nombre del docente -->
+        <div class="mb-4">
+          <label for="nombre_docente" class="form-label" style="font-weight: bold; color: #008037; font-size: 1.1rem;">Nombre del docente</label>
           <input id="nombre_docente"
                  type="text"
                  name="nombre_docente"
                  placeholder="Ingrese el nombre del docente"
                  formControlName="nombre_docente"
-                 class="form-control"
-          >
+                 class="form-control border-success"
+                 style="height: 50px; font-size: 1rem;">
         </div>
 
-        <br>
-
-        <div class="row justify-content-center mt-3">
-          <div class="col-6">
-            <button type="submit" class="btn btn-primary btn-block">Crear curso</button>
-          </div>
-          <div class="col-6">
-            <button type="button" class="btn btn-danger btn-block" (click)="cancelarCrearCurso()">Cancelar</button>
-          </div>
+        <!-- Botones -->
+        <div class="d-flex justify-content-between mt-4">
+          <button type="submit" class="btn btn-success w-45" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 6px;">Crear curso</button>
+          <button type="button" class="btn btn-danger w-45" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 6px;" (click)="cancelarCrearCurso()">Cancelar</button>
         </div>
-
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

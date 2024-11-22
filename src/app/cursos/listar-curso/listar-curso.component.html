@@ -1,34 +1,44 @@
 <div class="container-fluid max-width-900">
+  <h2 class="mb-4 titulo">Mis cursos</h2>
 
-  <!--  Listado de cursos -->
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">Código</th>
-      <th scope="col">Curso</th>
-      <th scope="col">Descripción del curso</th>
-      <th scope="col">Nombre del docente</th>
-      <th scope="col">Eliminar</th>
-    </tr>
-    </thead>
-    <tbody>
+  <!-- botón de crear curso -->
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-success btn-circle btncreate" (click)="crearCurso()">
+      <i class="bi bi-plus-circle btncreate"></i>
+    </button>
+  </div>
 
-    <!--  imprime curso por curso del listado de cursos  -->
-    <ng-container *ngFor="let curso of cursos">
-      <tr>
-        <td (click)="onSelected(curso)" class="clickable">{{curso.id}}</td>
-        <td (click)="onSelected(curso)" class="clickable">{{curso.nombre_curso}}</td>
-        <td (click)="onSelected(curso)" class="clickable">{{curso.descripcion_curso}}</td>
-        <td (click)="onSelected(curso)" class="clickable">{{curso.nombre_docente}}</td>
-        <!-- td (click)="borrarCurso(curso)" class="clickable"><img src="Link de imagen de borrar"  alt="borrar"/></td -->
-      </tr>
-    </ng-container>
-    </tbody>
-  </table>
-  <div class="row justify-content-center mt-3">
-    <div class="col-6">
-      <button type="submit" class="btn btn-primary btn-block" (click)="crearCurso()" >Crear curso</button>
+  <!-- Contenedor de tarjetas -->
+  <div class="row">
+
+    <!-- Iteración por cada curso -->
+    <div class="col-md-3 mb-4" *ngFor="let curso of cursos">
+      <div class="card text-center shadow-sm h-100">
+        <!-- Imagen de placeholder -->
+        <div class="card-img-top bg-light d-flex justify-content-center align-items-center" style="height: 150px; padding-top: 15px">
+          <img
+            src="assets/perfil.jpg"
+            alt="Imagen del curso"
+            class="img-fluid"
+            style="max-height: 100%; max-width: 100%; object-fit: cover;">
+        </div>
+
+        <!-- Botón para acceder al detalle -->
+        <div class="card-footer bg-white border-0">
+          <button
+            class="btn btn-sm custom-btn large-btn"
+            (click)="onSelectedDetail(curso)">
+            {{ curso.nombre_curso }}
+          </button>
+
+          <!-- Contenido del curso -->
+          <div class="card-body">
+            <p class="card-text mb-2 "><strong>{{ curso.nombre_docente }}</strong></p>
+            <p class="card-text text-muted">{{ curso.descripcion_curso }}</p>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>
-

@@ -1,1 +1,30 @@
-<p>detalle-curso works!</p>
+<div>
+  <div *ngIf="curso" class="contenedor-info">
+    <h3 class="curso">{{curso.nombre_curso}}</h3>
+    <p>{{curso.id}}</p>
+    <p class="docente">Docente: {{curso.nombre_docente}}</p>
+    <p class="descripcion">{{curso.descripcion_curso}}</p>
+    <div class="d-flex">
+
+      <!-- Botón para retroceder -->
+      <button (click)="onSelectedList()" class="btn btn-sm">
+        <i class="bi bi-arrow-left-short">
+        </i>
+      </button>
+
+      <!-- Botón para borrar curso -->
+      <button (click)="borrarCurso(curso)" class="btn btn-danger btn-circle">
+        <i class="bi bi-trash3">
+        </i>
+      </button>
+
+      <!-- Botón para editar curso -->
+      <button
+        class="btn btn-sm custom-btn"
+        (click)="onSelected(curso)">
+        <i class="bi bi-pencil-square">
+        </i>
+      </button>
+    </div>
+  </div>
+</div>

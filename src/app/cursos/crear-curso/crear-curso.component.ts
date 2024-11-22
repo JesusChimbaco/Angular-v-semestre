@@ -24,7 +24,7 @@ export class CrearCursoComponent implements OnInit{
 
   //Método para cancelar el método crear
   cancelarCrearCurso(){
-    this.router.navigate(['/listar']);   //Redirecciona a la ruta /listar
+    this.router.navigate(['/cursos/listar']);   //Redirecciona a la ruta /listar
   }
 
   //Método para crear un curso en el servicio
@@ -33,11 +33,11 @@ export class CrearCursoComponent implements OnInit{
       (curso: Curso) =>{
         Swal.fire(
           'Curso creado',
-          `El cuso ${curso.nombre_curso} ha sido creado con exito`,
+          `El curso ${curso.nombre_curso} ha sido creado con exito`,
           'success'
         );
         this.crearCursoForm.reset();   //Reinicia el formulario
-        this.router.navigate(['/listar']);
+        this.router.navigate(['/cursos/listar']);
       });
   }
 
