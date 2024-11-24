@@ -1,0 +1,50 @@
+button.btn-sm{
+  background-color: #00A858;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.btn-sm:hover{
+  transition: 0.2s;
+  background-color: #007C40FF;
+}
+
+.btn-danger{
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contenedor-info{
+  margin: 20px;
+  padding: 20px;
+  background-color: #e4dada;
+  align-items: center;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 2px 2px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+.curso{
+  font-weight: bold;
+}
+
+.descripcion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}

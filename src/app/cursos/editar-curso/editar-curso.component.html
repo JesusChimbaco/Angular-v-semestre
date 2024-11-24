@@ -1,1 +1,52 @@
-<p>editar-curso works!</p>
+<div class="d-flex justify-content-center align-items-center vh-100" style="background-color: #f4fdf4;">
+  <div class="card shadow-lg" style="max-width: 600px; width: 90%; border: 1px solid #008037; border-radius: 12px; padding: 20px;">
+    <div class="card-body">
+      <h3 class="card-title text-center mb-4" style="color: #008037; font-weight: bold; font-size: 1.8rem;">Editar Curso</h3>
+      <h5 class="card-subtitle text-center mb-4" style="color: #4d4d4d; font-size: 1.2rem;">Datos del curso</h5>
+
+      <form [formGroup]="editarCursoForm" (ngSubmit)="editarCurso(editarCursoForm.value)">
+        <!-- Campo nombre del curso -->
+        <div class="mb-4">
+          <label for="nombre_curso" class="form-label" style="font-weight: bold; color: #008037; font-size: 1.1rem;">Nombre</label>
+          <input id="nombre_curso"
+                 type="text"
+                 name="nombre_curso"
+                 placeholder="Escriba el nuevo nombre del curso"
+                 formControlName="nombre_curso"
+                 class="form-control border-success"
+                 style="height: 50px; font-size: 1rem;">
+        </div>
+
+        <!-- Campo descripción del curso -->
+        <div class="mb-4">
+          <label for="descripcion_curso" class="form-label" style="font-weight: bold; color: #008037; font-size: 1.1rem;">Descripción del curso</label>
+          <input id="descripcion_curso"
+                 type="text"
+                 name="descripcion_curso"
+                 placeholder="Ingrese la nueva descripción del curso"
+                 formControlName="descripcion_curso"
+                 class="form-control border-success"
+                 style="height: 50px; font-size: 1rem;">
+        </div>
+
+        <!-- Campo nombre del docente -->
+        <div class="mb-4">
+          <label for="nombre_docente" class="form-label" style="font-weight: bold; color: #008037; font-size: 1.1rem;">Nombre del docente</label>
+          <input id="nombre_docente"
+                 type="text"
+                 name="nombre_docente"
+                 placeholder="Ingrese el nuevo nombre del docente"
+                 formControlName="nombre_docente"
+                 class="form-control border-success"
+                 style="height: 50px; font-size: 1rem;">
+        </div>
+
+        <!-- Botones -->
+        <div class="d-flex justify-content-between mt-4">
+          <button type="submit" class="btn btn-success w-45" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 6px;">Editar curso</button>
+          <button type="button" class="btn btn-danger w-45" style="font-size: 0.9rem; padding: 8px 16px; border-radius: 6px;" (click)="cancelarEditarCurso()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

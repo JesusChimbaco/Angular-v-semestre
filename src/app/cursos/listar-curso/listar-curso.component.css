@@ -1,0 +1,83 @@
+.titulo{
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  padding-left: 10rem;
+  font-size: xx-large;
+  padding-top: 10px;
+
+}
+
+.btncreate{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clickable{
+  cursor:pointer;
+}
+.card {
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.card-footer button {
+  font-size: 14px;
+}
+
+.btn-block {
+  padding: 10px 0;
+}
+
+.custom-btn{
+  background-color: #00A858;
+  color: white;
+  border: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-btn:hover{
+  transition: 0.2s;
+  background-color: #007C40FF;
+}
+
+.mb-2{
+  font-family: 'Inter', sans-serif;
+}
+
+.text-muted{
+  font-family: 'Inter', sans-serif;
+}
+
+.large-btn {
+  font-size: 1.25rem !important;
+  padding: 12px 20px;
+  height: auto;
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.d-flex {
+  margin-bottom: 20px;
+}
